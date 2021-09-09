@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+      <title>Vue js CDN</title>
+      
+      </head>
+<body>
+   
+    <! -- Component 2 is local therefore test2 will not display globally -->
+<div id="globalComponent">
+<example-component-test1></example-component-test1>
+<example-component-test2></example-component-test2>
+{{message}}
+</div>
+<! -- Component -->
+<div id="localComponent">
+<example-component-test2></example-component-test2>
+<example-component-test1></example-component-test1>
+</div>
+        
+    
+      
+</body>
+
+<script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
+<script src="./Global.js"></script>
+</html>

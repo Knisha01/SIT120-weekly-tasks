@@ -1,1 +1,39 @@
-uploading files
+<!DOCTYPE html>
+<html lang="en">
+<head>
+      <title>Vue js CDN</title>
+      <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
+      </head>
+<body>
+   
+    
+    <div id="vueArray">
+        <h2>Lists (v-for and arrays)</h2>
+        <p>FRUIT LIST</p>
+        <li v-for="item in itemList">
+        {{ item.name }}
+        </li>
+        <br>
+        Enter Item Data: <input ref="updateList">
+        <button v-on:click="updateList">Update</button>
+        </div>
+    
+      
+</body>
+<script>
+    var vueArray = new Vue ({
+        el: "#vueArray",
+        data: {
+        itemList : [
+        {name: "Oranges"},
+        {name: "Apples"},
+        {name: "Bananas"},
+        ]
+        },
+        methods: {
+        updateList: function() {
+        this.itemList.push({name: this.$refs.updateList.value});
+        }
+        }
+        })
+    </script>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+      <title>Vue js CDN</title>
+      
+      </head>
+<body>
+<form id="demo">
+    <!-- text -->
+    <p>
+      <input type="text" v-model="msg">
+      {{msg}}
+    </p>
+    <!-- checkbox -->
+    <p>
+      <input type="checkbox" v-model="checked">
+      {{checked ? "yes" : "no"}}
+    </p>
+    <!-- radio buttons -->
+    <p>
+      <input type="radio" name="picked" value="one" v-model="picked">
+      <input type="radio" name="picked" value="two" v-model="picked">
+      {{picked}}
+    </p>
+    <!-- select -->
+    <p>
+      <select v-model="selected">
+        <option>one</option>
+        <option>two</option>
+      </select>
+     
+    </p>
+    
+    
+  </form>
+  </body>
+
+  
+  <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
+  <script>
+           new Vue({
+  el: '#demo',
+  data: {
+    msg      : 'hi!',
+    checked  : true,
+    picked   : 'one',
+    selected : 'two',
+  
+  }
+})
+  
+  </script> 
+  </html>
