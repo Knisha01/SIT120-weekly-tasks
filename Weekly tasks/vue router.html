@@ -1,0 +1,38 @@
+<html>
+  <head>
+    <title>Vue.js Router</title>
+    <meta charset="utf-8">
+    <script src="https://unpkg.com/vue"></script>
+    <script src="https://unpkg.com/vue-router@2.7.0/dist/vue-router.js"></script>
+  </head>
+  <body>
+    <div id="app">
+      <nav>
+        <ul>
+          <li><router-link to="/">Home</router-link></li>
+          <li><router-link to="/about">About</router-link></li>
+        </ul>
+      </nav>
+      <router-view></router-view>
+    </div>
+
+    <script>
+      var Home = { template: "<div><h1>Home</h1><p>This is home</p></div>" };
+      var About = { template: "<div><h1>About</h1><p>This is some information about our awesome company.</p></div>" };
+
+      var routes = [
+        { path: '/', component: Home },
+        { path: '/about', component: About}
+      ];
+
+      var router = new VueRouter({
+        routes: routes,
+      });
+
+      var app = new Vue({
+        el: '#app',
+        router: router
+      });
+    </script>
+  </body>
+</html>
